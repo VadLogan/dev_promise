@@ -162,4 +162,4 @@ class DevPromise {
 
 
 
-module.exports =  DevPromise // change to devPromise;
+module.exports =  DevPromise // change to devProe;
