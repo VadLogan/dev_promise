@@ -113,7 +113,9 @@ class DevPromise {
         }
 
             
-            const arrDone = [];
+
+            return new this((res,rej)=>{ 
+                const arrDone = [];
 
 
             for(let i = iterable.length; i--;){
@@ -121,7 +123,6 @@ class DevPromise {
                 a.then(() => iterable[i]).then(res => arrDone.push(res), err => arrDone.push(err));
 
             }
-            return new this((res,rej)=>{ 
                 res(arrDone);
                 rej(arrDone);
             });
